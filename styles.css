@@ -1,0 +1,143 @@
+:root {
+  --primary-color: #FF6B6B;
+  --secondary-color: #1DD1A1;
+  --accent-color: #FF9F43;
+  --dark-color: #222F3E;
+  --light-bg: #F5F5F5;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Login Container */
+.login-container {
+  background: var(--primary-color);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Logo */
+.login-container img {
+  width: 90px;
+  margin-bottom: 25px;
+}
+
+/* Form Heading */
+.login-container h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Form Inputs */
+.login-container input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-container input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.login-container input:focus {
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Login Button */
+.login-container button {
+  width: 100%;
+  padding: 14px;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.login-container button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Links */
+.login-container a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+/* Animated Elements */
+.login-container::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.login-container::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  bottom: -20px;
+  left: -20px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 100%;
+  }
+}
